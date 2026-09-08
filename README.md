@@ -1,24 +1,21 @@
-# Watercourse Book Demo
+# Spa Booking Demo (Watercourse Way)
 
-A customer-facing booking demo for Watercourse Way Bath House Spa. This app demonstrates how a mobile-friendly booking system could streamline operations and protect critical resources like cleaning times.
+A customer-facing booking demo app built with React, Vite, Tailwind CSS, and TypeScript.
 
-## Manager Pitch
+## Manager / Pitch Demo
 
-"Phone-only tub booking takes 15–30 min at the desk. This lets guests pick room + time on their phone, protects 15 min clean time, and shows which empty hours you can sell as 2-hour packages."
+"Phone-only tub booking takes 15–30 min at the desk. This lets guests pick room + time on their phone, protects 15 min clean time, and shows which empty hours you can sell as 2-hour packages. It also includes integrated payment via Square to prevent no-shows and allows you to test membership models."
 
-## Running the App
+## Running the App Locally
 
-1. Ensure you have Node.js installed.
-2. Install dependencies:
-   `npm install`
-3. Start the development server:
-   `npm run dev`
-4. Open the provided localhost link in your browser. For the best demo experience, view it on a mobile device or use your browser's responsive design mode to simulate a phone (e.g., iPhone X).
+1. `npm install`
+2. `npm run dev`
 
-## Features
+## Deployment
 
-- **Mobile First:** Clean spa aesthetic (warm stone, dark wood, cream, sage) with large tap targets.
-- **Smart Scheduling:** Automatically enforces a 15-minute cleaning buffer between bookings and caps occupancy at 75% to prevent staff burnout.
-- **Dynamic Pricing:** Calculates live pricing based on weekday/weekend rates and standard/premium room types.
-- **Mock Data:** Pre-seeds 2 weeks of mock bookings to demonstrate real-world usage patterns.
-- **Manager Insights:** Interactive dashboard to model potential revenue and profit impacts.
+Since this is a standard Vite React app, you can easily deploy it for free using services like Vercel, Netlify, or GitHub Pages.
+
+To create a production build:
+`npm run build`
+
+You can then serve the `dist/` directory on any static host. If you have an iPhone, deploying to Vercel/Netlify will give you a public URL (e.g. `your-app.vercel.app`) that you can turn into a QR Code online for free (e.g. using qr-code-generator.com). Just have the manager scan the QR code to try the app on their own phone instantly!

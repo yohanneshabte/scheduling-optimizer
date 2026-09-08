@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Home, Calendar, CalendarCheck, BarChart3 } from 'lucide-react';
+import { Home, CalendarPlus, Calendar, BarChart3, ListChecks } from 'lucide-react';
 import { HomePage } from './pages/HomePage';
 import { BookPage } from './pages/BookPage';
-import { ReservationsPage } from './pages/ReservationsPage';
+import { CalendarPage } from './pages/CalendarPage';
 import { InsightsPage } from './pages/InsightsPage';
+import { ReservationsPage } from './pages/ReservationsPage';
 import { initializeStore } from './lib/seed';
 
 function TabBar() {
@@ -12,13 +13,14 @@ function TabBar() {
 
   const tabs = [
     { path: '/', icon: Home, label: 'Home' },
-    { path: '/book', icon: Calendar, label: 'Book' },
-    { path: '/reservations', icon: CalendarCheck, label: 'My Bookings' },
-    { path: '/insights', icon: BarChart3, label: 'Staff' },
+    { path: '/book', icon: CalendarPlus, label: 'Book Now' },
+    { path: '/reservations', icon: ListChecks, label: 'My Bookings' },
+    { path: '/calendar', icon: Calendar, label: 'Calendar' },
+    { path: '/insights', icon: BarChart3, label: 'Desk' },
   ];
 
   return (
-    <div className="fixed bottom-0 w-full bg-warm-stone border-t border-dark-wood/20 pb-safe">
+    <div className="fixed bottom-0 w-full bg-warm-stone border-t border-dark-wood/20 pb-safe z-50">
       <div className="flex justify-around items-center h-16">
         {tabs.map((tab) => {
           const Icon = tab.icon;
@@ -32,7 +34,7 @@ function TabBar() {
               }`}
             >
               <Icon size={24} />
-              <span className="text-xs">{tab.label}</span>
+              <span className="text-xs text-[10px]">{tab.label}</span>
             </Link>
           );
         })}
@@ -53,6 +55,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/book" element={<BookPage />} />
           <Route path="/reservations" element={<ReservationsPage />} />
+          <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/insights" element={<InsightsPage />} />
         </Routes>
         <TabBar />
