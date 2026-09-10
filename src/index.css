@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-stone: #d7ccc8;
+  --color-dark-wood: #3e2723;
+  --color-cream: #fffdd0;
+  --color-sage: #8f9779;
+  --color-sage-light: #b2bba0;
+  --color-sage-dark: #6e755b;
+}
+
+body {
+  @apply bg-cream text-dark-wood font-sans;
+}
