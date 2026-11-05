@@ -127,7 +127,7 @@ export function BookPage() {
         </div>
 
         <div className="bg-sage-light/30 p-4 rounded-md text-sage-dark text-sm mb-8 font-medium">
-          <strong>This is a demo.</strong> Real bookings still call (650) 462-2000 until we go live.
+          <strong>This is a demo.</strong> Real bookings still call <CLIENT_PHONE> until we go live.
         </div>
 
         <button

@@ -3,8 +3,8 @@ import type { LocationConfig, Room, PricingRule, RoomFeature } from './types';
 export const CONFIG: LocationConfig = {
   id: 'watercourse-way',
   name: 'Watercourse Way',
-  address: '165 Channing Avenue, Palo Alto, CA 94301',
-  phone: '650-462-2000',
+  address: '<CLIENT_ADDRESS>',
+  phone: '<CLIENT_PHONE>',
   theme: {
     primary: 'sage-dark',
     secondary: 'warm-stone',
